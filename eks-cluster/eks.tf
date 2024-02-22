@@ -1,5 +1,5 @@
  provider "aws" {
- region = "eu-west-3"
+ region = "us-east-1"
 }
 
 data "aws_iam_policy_document" "iam_role_data" {
@@ -40,9 +40,9 @@ resource "aws_eks_cluster" "cluster" {
   role_arn = aws_iam_role.iamrole.arn
   vpc_config {
     subnet_ids = [
-      "subnet-02eeb5247c4007027",
-      "subnet-0a841430fdfb696f4",
-      "subnet-03c1446940d7891fe"
+      "subnet-08a1ddcbf956f339d",
+      "subnet-02db042cc5c413950",
+      "subnet-0a10aee9902ea7f25"
     ]
   }
 
